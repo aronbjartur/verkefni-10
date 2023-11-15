@@ -1,0 +1,81 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+    );
+}
+html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+}
+code {
+    font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+}
+
+main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.weather-box {
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+    position: relative;
+	margin-bottom: 2rem;
+	border: 1px solid rgba(var(--accent-light), 25%);
+	background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+.temperature {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+}
+.humidity {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+}
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
